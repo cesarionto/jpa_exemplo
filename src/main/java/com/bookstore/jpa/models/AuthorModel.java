@@ -10,20 +10,18 @@ import java.io.Serializable;
 import java.util.UUID;
 
 @Entity
-@Table(name = "TB_BOOK")
+@Table(name = "TB_AUTHOR")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class BookModel implements Serializable {
-
+public class AuthorModel implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
-    @Column(nullable = false, unique = true)
-    private String title;
-
+    @Column(unique=true, nullable = false)
+    private String name;
 }
